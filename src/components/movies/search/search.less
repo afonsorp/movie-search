@@ -1,0 +1,33 @@
+@import "../../../variables.less";
+
+.m-search {
+  &__container {
+    position: sticky;
+    top: 0;
+    background-color: @tertiary-color;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+  }
+}
+
+.a-search {
+  &__input {
+    padding: 0.5rem 1rem;
+    background: @tertiary-color;
+    border: 0.0625rem solid @primary-color;
+    border-radius: @border-radius;
+    font-size: 1rem;
+    color: @primary-color;
+    height: 1.5rem;
+    appearance: none;
+    transition: border 0.15s ease 0s;
+    display: flex;
+    margin: auto;
+    margin-top: 1rem;
+    :focus {
+      outline: none;
+      box-shadow: none;
+      border-color: @secondary-color;
+    }
+  }
+}

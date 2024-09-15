@@ -1,0 +1,37 @@
+@import "variables.less";
+
+.m-button {
+  width: 1rem;
+  height: 1rem;
+  color: @primary-color;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+  cursor: pointer;
+  &:disabled {
+    cursor: default;
+    color: @shadow-color;
+  }
+  &:hover:not(:disabled) {
+    color: @secondary-color;
+  }
+}
+
+body {
+  background-color: @tertiary-color;
+  color: @primary-color;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

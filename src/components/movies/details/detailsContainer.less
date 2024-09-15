@@ -1,0 +1,50 @@
+@import "../../../variables.less";
+.m-details {
+  &__container {
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.1) 0rem 0.375rem 0.75rem -0.125rem,
+      rgba(0, 0, 0, 0) 0rem 0.1875rem 0.4375rem -0.1875rem;
+    border-radius: @border-radius;
+    width: calc(100% - 2rem);
+    max-width: 50rem;
+    margin: 1rem auto;
+    background-color: white;
+    gap: 1rem;
+    padding: 1rem;
+    @media screen {
+      @media (max-width: 50rem) {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+  &__info {
+    flex: 1;
+  }
+}
+
+.a-details {
+  &__image {
+    width: 18.75rem;
+    border: 0.0625rem solid @secondary-color;
+    padding: 0.0625rem;
+    @media screen {
+      @media (max-width: 50rem) {
+        width: 100%;
+        max-height: 28.125rem;
+        object-fit: cover;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+  &__plotTitle {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  &__section {
+    margin: 2rem 0;
+  }
+}

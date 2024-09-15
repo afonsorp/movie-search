@@ -1,0 +1,47 @@
+.o-loadingContainer {
+  position: relative;
+}
+
+.m-loading {
+  &__contentLoading {
+    opacity: 0.1;
+  }
+}
+
+.a-loading {
+  &__symbol {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    width: 5rem;
+    aspect-ratio: 1;
+    border: 0.125rem solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: grid;
+    animation: l11 1.5s infinite linear;
+    transform-origin: 50% 80%;
+    left: 0;
+    right: 0;
+
+    &:before,
+    &:after {
+      content: "";
+      grid-area: 1/1;
+      border: inherit;
+      border-radius: 50%;
+      animation: inherit;
+      animation-duration: 1s;
+      transform-origin: inherit;
+    }
+    &:after {
+      --s: -1;
+    }
+    @keyframes l11 {
+      100% {
+        transform: rotate(calc(var(--s, 1) * 1turn));
+      }
+    }
+  }
+}
