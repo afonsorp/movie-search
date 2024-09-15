@@ -1,4 +1,4 @@
-#Welcome to the Movie Search App! Here's what you need to know:
+# Welcome to the Movie Search App! Here's what you need to know:
 
 - It's a functional app with two screens: Home and Details.
 - The layout and design are clean and user-friendly.
