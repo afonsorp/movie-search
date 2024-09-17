@@ -15,9 +15,12 @@ export const getMovies = (term, page) => {
   const trimmedTerm = term ? term.trim() : term;
   const key = `${term}#${page}`;
   if (!dataCache[key]) {
-    const url = `${BASE_URL}&s=${trimmedTerm}&page=${page}`;
+    const params = {
+      s: trimmedTerm,
+      page: page,
+    };
     return axios
-      .get(url)
+      .get(BASE_URL, { params })
       .then((response) => {
         dataCache[key] = response.data;
         return response.data;
@@ -32,9 +35,11 @@ export const getMovies = (term, page) => {
 export const getMovieDetails = (id) => {
   const key = id;
   if (!dataCache[key]) {
-    const url = `${BASE_URL}&i=${id}`;
+    const params = {
+      i: id,
+    };
     return axios
-      .get(url)
+      .get(BASE_URL, { params })
       .then((response) => {
         dataCache[key] = response.data;
         return response.data;
