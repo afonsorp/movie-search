@@ -23,20 +23,19 @@ export const Movies = () => {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
-      <Loading loading={loading}>
-        {totalItems ? (
-          <List movies={movies} />
-        ) : (
-          !loading && <Message message={error} />
-        )}
-        {hasPagination && (
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            setCurrentPage={setCurrentPage}
-          />
-        )}
-      </Loading>
+      <Loading loading={loading} />
+      {totalItems ? (
+        <List movies={movies} />
+      ) : (
+        !loading && <Message message={error} />
+      )}
+      {hasPagination && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          setCurrentPage={setCurrentPage}
+        />
+      )}
     </div>
   );
 };

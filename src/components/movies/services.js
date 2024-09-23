@@ -1,5 +1,4 @@
 import axios from "axios";
-import { API_KEY } from "../../api-config";
 
 export const ERROR_DEFAULT = {
   Error:
@@ -7,7 +6,7 @@ export const ERROR_DEFAULT = {
   Response: "False",
 };
 
-const BASE_URL = `https://www.omdbapi.com/?apikey=${API_KEY}&type=movie`;
+const BASE_URL = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&type=movie`;
 
 const dataCache = {};
 

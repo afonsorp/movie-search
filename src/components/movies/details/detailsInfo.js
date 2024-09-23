@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import useFavorites from "../list/hooks/useFavorites";
-import { FavoriteIcon } from "../../favoriteIcon/favoriteIcon";
+import useFavorites from "../../favorites/hooks/useFavorites";
+import { FavoriteIcon } from "../../favorites/favoriteIcon";
 import "./detailsInfo.less";
 
 export const DetailsInfo = ({ rating, genre, imdbID, runtime }) => {

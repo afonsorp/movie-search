@@ -1,11 +1,18 @@
 import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const useNavigateBack = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { key } = location;
+
   const navigateBack = useCallback(() => {
-    navigate(-1);
-  }, [navigate]);
+    if (key !== "default") {
+      navigate(-1);
+    } else {
+      navigate("/home");
+    }
+  }, [navigate, key]);
 
   return { navigateBack };
 };

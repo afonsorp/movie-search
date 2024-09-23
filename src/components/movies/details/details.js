@@ -17,21 +17,20 @@ export const Details = () => {
         title={`${Title || "Details"}`}
         description="Movie Search Details Page"
       />
-      <Loading loading={loading}>
-        {!loading && error && <Message message={error} />}
-        {details.imdbID && (
-          <DetailsContainer
-            imdbID={imdbID}
-            Year={Year}
-            Plot={Plot}
-            Title={Title}
-            Ratings={Ratings}
-            Genre={Genre}
-            Poster={Poster}
-            Runtime={Runtime}
-          />
-        )}
-      </Loading>
+      <Loading loading={loading} />
+      {!loading && error && <Message message={error} />}
+      {details.imdbID && (
+        <DetailsContainer
+          imdbID={imdbID}
+          Year={Year}
+          Plot={Plot}
+          Title={Title}
+          Ratings={Ratings}
+          Genre={Genre}
+          Poster={Poster}
+          Runtime={Runtime}
+        />
+      )}
     </>
   );
 };

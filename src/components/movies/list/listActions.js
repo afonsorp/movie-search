@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FaRegEye } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { FavoriteIcon } from "../../favoriteIcon/favoriteIcon";
+import { FavoriteIcon } from "../../favorites/favoriteIcon";
 import "./listActions.less";
 
 export const ListActions = ({ imdbID, favorites, setFavorites }) => {

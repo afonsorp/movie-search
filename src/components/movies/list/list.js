@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import useFavorites from "./hooks/useFavorites";
+import useFavorites from "../../favorites/hooks/useFavorites";
 import { ListItem } from "./listItem";
 import "./list.less";
 

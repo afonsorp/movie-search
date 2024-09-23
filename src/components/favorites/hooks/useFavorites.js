@@ -6,9 +6,7 @@ const useFavorites = () => {
   const [favorites, setFavorites] = useState(value || []);
 
   useEffect(() => {
-    setTimeout(() => {
-      localStorage.setItem(KEY, JSON.stringify(favorites));
-    }, 0);
+    localStorage.setItem(KEY, JSON.stringify(favorites));
   }, [favorites]);
 
   return {

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import useFavoriteActions from "../movies/list/hooks/useFavoriteActions";
+import useFavoriteActions from "./hooks/useFavoriteActions";
 import { FaStar } from "react-icons/fa6";
 import classNames from "classnames";
 import "./favoriteIcon.less";
