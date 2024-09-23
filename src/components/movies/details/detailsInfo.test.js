@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { DetailsInfo } from "./detailsInfo";
-import useFavorites from "../list/hooks/useFavorites";
+import useFavorites from "../../favorites/hooks/useFavorites";
 import userEvent from "@testing-library/user-event";
-jest.mock("../list/hooks/useFavorites");
+jest.mock("../../favorites/hooks/useFavorites.js");
 
 const params = {
   rating: "90/100",
