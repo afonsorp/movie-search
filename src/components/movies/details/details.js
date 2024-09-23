@@ -9,8 +9,18 @@ import { HelmetComponent } from "../../helmet/helmetComponent";
 export const Details = () => {
   const { loading, stopLoading } = useLoading(true);
   const { details, error } = useFetchDetails(stopLoading);
-  const { imdbID, Year, Plot, Title, Ratings, Genre, Poster, Runtime } =
-    details;
+  const {
+    imdbID,
+    Year,
+    Plot,
+    Title,
+    Ratings,
+    Genre,
+    Poster,
+    Runtime,
+    Actors,
+    Director,
+  } = details;
   return (
     <>
       <HelmetComponent
@@ -29,6 +39,8 @@ export const Details = () => {
           Genre={Genre}
           Poster={Poster}
           Runtime={Runtime}
+          Actors={Actors}
+          Director={Director}
         />
       )}
     </>

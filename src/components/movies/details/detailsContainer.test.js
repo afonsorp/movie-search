@@ -26,19 +26,21 @@ const MOCK_DATA = {
   ],
   Genre: "Horror, Sci-Fi",
   Runtime: "117 min",
+  Director: "Ridley Scott",
+  Actors: "Sigourney Weaver, Tom Skerritt, John Hurt",
 };
 
-test("must have title, plot and image", () => {
+test("must have title, plot, actors, director and image", () => {
   render(
     <MemoryRouter>
       <DetailsContainer {...MOCK_DATA} />
     </MemoryRouter>
   );
   const title = screen.getByRole("heading", { name: /alien/i });
-  const plot = screen.getByRole("paragraph");
+  const info = screen.getAllByRole("paragraph");
   const image = screen.getByRole("img");
 
   expect(title).toBeInTheDocument();
-  expect(plot).toBeInTheDocument();
+  expect(info).toHaveLength(3);
   expect(image).toBeInTheDocument();
 });

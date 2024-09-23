@@ -15,6 +15,8 @@ export const DetailsContainer = ({
   Genre,
   Poster,
   Runtime,
+  Actors,
+  Director,
 }) => {
   const { navigateBack } = useNavigateBack();
   const rating = Ratings && Ratings.length ? Ratings[0].Value : "N/A";
@@ -33,8 +35,12 @@ export const DetailsContainer = ({
           genre={Genre}
           runtime={Runtime}
         />
-        <h2 className="a-details__plotTitle">Plot</h2>
-        <p>{Plot}</p>
+        <h2 className="a-details__smallTitle">Plot</h2>
+        <p className="a-details__paragraph">{Plot}</p>
+        <h2 className="a-details__smallTitle">Actors</h2>
+        <p className="a-details__paragraph">{Actors}</p>
+        <h2 className="a-details__smallTitle">Director</h2>
+        <p className="a-details__paragraph">{Director}</p>
       </div>
       <img
         alt={Title}
@@ -54,6 +60,8 @@ DetailsContainer.propTypes = {
   Genre: PropTypes.string.isRequired,
   Poster: PropTypes.string.isRequired,
   Runtime: PropTypes.string.isRequired,
+  Actors: PropTypes.string.isRequired,
+  Director: PropTypes.string.isRequired,
 };
 
 export default DetailsContainer;

@@ -32,6 +32,8 @@ const MOCK_DATA = {
   ],
   Genre: "Horror, Sci-Fi",
   Runtime: "117 min",
+  Director: "Ridley Scott",
+  Actors: "Sigourney Weaver, Tom Skerritt, John Hurt",
 };
 
 const MOCK_ERROR = { details: {}, error: "Something went wrong" };
